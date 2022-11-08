@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		2D330F662919F714000C6993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F652919F714000C6993 /* AppDelegate.swift */; };
 		2D330F682919F714000C6993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F672919F714000C6993 /* SceneDelegate.swift */; };
-		2D330F6A2919F714000C6993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F692919F714000C6993 /* ViewController.swift */; };
+		2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F692919F714000C6993 /* NewsListVC.swift */; };
 		2D330F6D2919F714000C6993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F6B2919F714000C6993 /* Main.storyboard */; };
 		2D330F6F2919F714000C6993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F6E2919F714000C6993 /* Assets.xcassets */; };
 		2D330F722919F714000C6993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F702919F714000C6993 /* LaunchScreen.storyboard */; };
 		2D330F7D2919F714000C6993 /* NewLikeTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F7C2919F714000C6993 /* NewLikeTimesTests.swift */; };
 		2D330F872919F715000C6993 /* NewLikeTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */; };
 		2D330F892919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */; };
+		2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F952919F755000C6993 /* NewsDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		2D330F622919F714000C6993 /* NewLikeTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewLikeTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D330F652919F714000C6993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D330F672919F714000C6993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D330F692919F714000C6993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2D330F692919F714000C6993 /* NewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVC.swift; sourceTree = "<group>"; };
 		2D330F6C2919F714000C6993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D330F6E2919F714000C6993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D330F712919F714000C6993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		2D330F822919F715000C6993 /* NewLikeTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewLikeTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITests.swift; sourceTree = "<group>"; };
 		2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D330F952919F755000C6993 /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,11 @@
 		2D330F642919F714000C6993 /* NewLikeTimes */ = {
 			isa = PBXGroup;
 			children = (
+				2D330F992919F81E000C6993 /* Resource */,
+				2D330F982919F80C000C6993 /* NewsDetail */,
+				2D330F972919F7F4000C6993 /* NewsList */,
 				2D330F652919F714000C6993 /* AppDelegate.swift */,
 				2D330F672919F714000C6993 /* SceneDelegate.swift */,
-				2D330F692919F714000C6993 /* ViewController.swift */,
-				2D330F6B2919F714000C6993 /* Main.storyboard */,
-				2D330F6E2919F714000C6993 /* Assets.xcassets */,
 				2D330F702919F714000C6993 /* LaunchScreen.storyboard */,
 				2D330F732919F714000C6993 /* Info.plist */,
 			);
@@ -125,6 +127,31 @@
 				2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */,
 			);
 			path = NewLikeTimesUITests;
+			sourceTree = "<group>";
+		};
+		2D330F972919F7F4000C6993 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				2D330F692919F714000C6993 /* NewsListVC.swift */,
+				2D330F6B2919F714000C6993 /* Main.storyboard */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		2D330F982919F80C000C6993 /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2D330F952919F755000C6993 /* NewsDetailVC.swift */,
+			);
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		2D330F992919F81E000C6993 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2D330F6E2919F714000C6993 /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D330F6A2919F714000C6993 /* ViewController.swift in Sources */,
+				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
 				2D330F662919F714000C6993 /* AppDelegate.swift in Sources */,
+				2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */,
 				2D330F682919F714000C6993 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
