@@ -27,12 +27,19 @@ extension NewsListAdapter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(NewsListCell.self)") as! NewsListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(NewsListCell.self)",
+                                                 for: indexPath) as! NewsListCell
         let row = indexPath.row
         cell.titleLabel.text = newsList[row].title
         cell.bodyLabel.text = newsList[row].body
-        cell.thumbnailImageView.image = UIImage(named: "")
+        cell.thumbnailImageView.image = newsList[row].image
 
-        return UITableViewCell()
+        return cell
+    }
+}
+
+extension NewsListAdapter: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: 
     }
 }

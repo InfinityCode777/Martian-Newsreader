@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="2DQ-EJ-k0I" customClass="NewsListCell" customModule="NewLikeTimes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsListCell" rowHeight="200" id="2DQ-EJ-k0I" customClass="NewsListCell" customModule="NewLikeTimes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2DQ-EJ-k0I" id="GqS-2F-qVd">
@@ -95,6 +95,9 @@
                             <constraint firstItem="yGr-0p-oQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yah-Rk-XbL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="yGr-0p-oQa" id="mvS-4X-PzD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

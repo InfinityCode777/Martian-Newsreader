@@ -22,8 +22,10 @@ class NewLikeTimesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+//    func testJSONDecode() throws {
     func loadJSONData() {
         let expectation = XCTestExpectation(description: "Get all news articles")
+        //        guard
         let testBundle = Bundle(for: type(of: self))
         newsManager.loadAll(filename: "test_news_data",
                             bundle: testBundle) {[weak self] result in
