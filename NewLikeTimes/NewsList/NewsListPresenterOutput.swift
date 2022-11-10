@@ -9,4 +9,6 @@ import Foundation
 
 protocol NewsListPresenterOutput: AnyObject {
     func show(newsList: [NewsViewModel])
+    // Navigation, should be in router, simplified here
+    func showDetail(news: NewsViewModel)
 }

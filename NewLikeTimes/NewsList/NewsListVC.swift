@@ -15,7 +15,7 @@ class NewsListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setupTableView()
-        adapter = NewsListAdapter()
+        adapter = NewsListAdapter(presenter: presenter)
         setupTableView()
     }
 
@@ -26,7 +26,7 @@ class NewsListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)        
-        presenter.eventLoadNewsList()
+        presenter.eventViewReady()
     }
     
     private func setupTableView() {
@@ -39,6 +39,12 @@ class NewsListVC: UIViewController {
 }
 
 extension NewsListVC: NewsListPresenterOutput {
+    func showDetail(news: NewsViewModel) {
+        let newsDetailVC = Coordinator.getNewsDetailVC()
+        newsDetailVC.news = news
+        navigationController?.pushViewController(newsDetailVC, animated: true)        
+    }
+    
     func show(newsList: [NewsViewModel]) {
         adapter.newsList = newsList
         DispatchQueue.main.async { [ weak self] in

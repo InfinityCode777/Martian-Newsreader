@@ -32,7 +32,12 @@ class NewsListPresenter {
         eventLoadNewsList()
     }
     
-    func createViewModelList(_ domainDataList: [NewsDomainModel]) -> [NewsViewModel] {
+    func eventItemSelected(news: NewsViewModel) {
+        // Router, use VC for now
+        output.showDetail(news: news)
+    }
+    
+    private func createViewModelList(_ domainDataList: [NewsDomainModel]) -> [NewsViewModel] {
         var newsList = [NewsViewModel]()
         var topImage: UIImage?
         for domainData in domainDataList {
@@ -53,25 +58,10 @@ class NewsListPresenter {
         return newsList
     }
     
-    func getImage(with url: URL) -> UIImage {
+    private func getImage(with url: URL) -> UIImage {
         return UIImage()
     }
 }
-
-
-//extension UIImage {
-//    func load(url: URL) {
-//        DispatchQueue.global().async {
-//            if let data = try? Data(contentsOf: url) {
-//                if let image = UIImage(data: data) {
-//                    DispatchQueue.main.async {
-//                        self = image
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
 
 extension UIImage {
   convenience init?(url: URL?) {

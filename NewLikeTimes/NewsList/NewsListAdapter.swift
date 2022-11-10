@@ -10,13 +10,15 @@ import UIKit
 
 class NewsListAdapter: NSObject {
     var newsList: [NewsViewModel]
+    var presenter: NewsListPresenter
     
-    init(newsList: [NewsViewModel]) {
+    init(newsList: [NewsViewModel], presenter: NewsListPresenter) {
         self.newsList = newsList
+        self.presenter = presenter
     }
     
-    convenience override init() {
-        self.init(newsList: [])
+    convenience init(presenter: NewsListPresenter) {
+        self.init(newsList: [], presenter: presenter)
     }
 
 }
@@ -40,6 +42,6 @@ extension NewsListAdapter: UITableViewDataSource {
 
 extension NewsListAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: 
+        presenter.eventItemSelected(news: newsList[indexPath.row])
     }
 }
