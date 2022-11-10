@@ -17,7 +17,6 @@ class NewsListAdapter: NSObject {
     
     convenience override init() {
         self.init(newsList: [])
-//        self.newsList = [NewsViewModel]()
     }
 
 }

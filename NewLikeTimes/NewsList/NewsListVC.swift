@@ -7,11 +7,9 @@
 
 import UIKit
 
-class NewsListVC: UIViewController {
-    
+class NewsListVC: UIViewController {    
     var presenter: NewsListPresenter!
     private var adapter: NewsListAdapter!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

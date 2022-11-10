@@ -29,14 +29,11 @@ class NewsManager {
             let jsonData = try decoder.decode([NewsDomainModel].self, from: data)
             
             completion(.success(jsonData))
-            //                return jsonData
-            //                return jsonData.person
         } catch {
             print("error:\(error)")
             completion(.failure(.failedToDecodeJson))
         }
     }
-        //        return nil
 }
 
 public enum DataFetchError: LocalizedError {

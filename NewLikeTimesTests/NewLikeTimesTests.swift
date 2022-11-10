@@ -10,34 +10,26 @@ import XCTest
 
 class NewLikeTimesTests: XCTestCase {
     var newsManager: NewsManager!
+    var testNewsData: [NewsDomainModel]!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        self.newsManager = NewsManager.shared
-        
+        newsManager = NewsManager.shared
+        loadJSONData()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testJSONDecode() throws {
-        // Read the file
-//        let testNewsData = newsManager.loadAll(filename: "test_news_data")
-        
-        var testNewsData: [NewsDomainModel]!
-        
+    func loadJSONData() {
         let expectation = XCTestExpectation(description: "Get all news articles")
-        //        guard
         let testBundle = Bundle(for: type(of: self))
         newsManager.loadAll(filename: "test_news_data",
-                            bundle: testBundle) { result in
-            //        newsManager.loadAll(filename: "news_data") { result in
+                            bundle: testBundle) {[weak self] result in
             switch result {
-                //                .success(let newsData):
-                //                testNewsData = testNewsData
             case .success(let domainData):
-                testNewsData = domainData
+                self?.testNewsData = domainData
             case .failure(let domainError):
                 XCTFail("Error fetching data:\(domainError.localizedDescription)")
             }
@@ -47,21 +39,25 @@ class NewLikeTimesTests: XCTestCase {
         
         wait(for: [expectation], timeout: 15)
         
-//        else {
-//            XCTFail("Failed to parse json file")
-//            return
-//        }
-        
         XCTAssertEqual(testNewsData.count, 3, "There only 3 entries in the test data")
-        
-//        XCTAssertTrue(testNewsData?.count == 3, "There only 3 entries in the test data")
-        
+    }
+    
+    func testDataMatch1() throws {
         XCTAssertEqual(testNewsData[0].title, "Lorem", "titles do not match")
-        XCTAssertEqual(testNewsData[0].images[0].topImage, true, "titles do not match")
+        XCTAssertEqual(testNewsData[0].images[0].topImage, true, "topImage do not match")
         XCTAssertEqual(testNewsData[0].images[0].width, 100, "Widths do not match")
         XCTAssertEqual(testNewsData[0].images[0].height, 50, "Heights do not match")
         XCTAssertEqual(testNewsData[0].body, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor.", "titles do not match")
     }
+    
+    func testDataMatch2() throws {
+        XCTAssertEqual(testNewsData[2].title, "Lorem", "titles do not match")
+        XCTAssertEqual(testNewsData[2].images[1].topImage, false, "topImage do not match")
+        XCTAssertEqual(testNewsData[2].images[1].width, 180, "Widths do not match")
+        XCTAssertEqual(testNewsData[2].images[1].height, 80, "Heights do not match")
+        XCTAssertEqual(testNewsData[2].body, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor.")
+    }
+
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
