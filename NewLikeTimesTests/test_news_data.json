@@ -1,0 +1,33 @@
+[{
+	"title": "Lorem",
+	"images": [{
+		"top_image": true,
+		"url": "https:\/\/s1.nyt.com\/ios-newsreader\/candidates\/images\/img1.jpg",
+		"width": 100,
+		"height": 50
+	}],
+	"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor."
+}, {
+	"title": "Ipsum",
+	"images": [{
+		"top_image": true,
+		"url": "https:\/\/s1.nyt.com\/ios-newsreader\/candidates\/images\/img2.jpg",
+		"width": 160,
+		"height": 60
+	}],
+	"body": "Etiam laoreet in mi nec tempor. Maecenas dictum aliquet mi et dignissim."
+}, {
+	"title": "Lorem",
+	"images": [{
+		"top_image": true,
+		"url": "https:\/\/s1.nyt.com\/ios-newsreader\/candidates\/images\/img3.jpg",
+		"width": 170,
+		"height": 70
+	}, {
+		"top_image": false,
+		"url": "https:\/\/s1.nyt.com\/ios-newsreader\/candidates\/images\/img4.jpg",
+		"width": 180,
+		"height": 80
+	}],
+	"body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor."
+}]

@@ -5,10 +5,17 @@
 //  Created by Jing Wang on 11/8/22.
 //
 
-import Foundation
+import UIKit
 
-struct NewsDomainModel {
+struct NewsDomainModel: Codable {
     var title: String
     var body: String
-    var imageURL: URL
+    var images: [newImageBundle]
+}
+
+struct newImageBundle: Codable {
+    var topImage: Bool
+    var url: URL
+    var width: CGFloat
+    var height: CGFloat
 }
