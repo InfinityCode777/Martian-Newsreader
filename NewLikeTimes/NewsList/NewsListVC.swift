@@ -14,9 +14,9 @@ class NewsListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        setupTableView()
         adapter = NewsListAdapter()
-        tableView.delegate = adapter
-        tableView.dataSource = adapter
+        setupTableView()
     }
 
     override func awakeFromNib() {
@@ -27,6 +27,13 @@ class NewsListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)        
         presenter.eventLoadNewsList()
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = adapter
+        tableView.dataSource = adapter
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
 }
