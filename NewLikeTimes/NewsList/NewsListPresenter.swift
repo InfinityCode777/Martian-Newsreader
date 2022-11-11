@@ -21,8 +21,8 @@ class NewsListPresenter {
             case .success(let domainData):
                 let newsList = self.createViewModelList(domainData)
                 self.output.show(newsList: newsList)
-            case .failure(_):
-                // TODO: bubble up the error
+            case .failure(let error):
+                self.output.showError(error: error)
                 break
             }
         }

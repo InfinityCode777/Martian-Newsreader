@@ -35,20 +35,3 @@ class NewsManager {
         }
     }
 }
-
-public enum DataFetchError: LocalizedError {
-    case failedToDecodeJson
-    case failedToLocateFile
-    case testError
-    
-    public var errorDescription: String? {
-        switch self {
-        case .failedToDecodeJson:
-            return "Failed to decode the json"
-        case .failedToLocateFile:
-            return "Failed to locate file"
-        case .testError:
-            return ""
-        }
-    }
-}

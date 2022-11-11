@@ -48,9 +48,13 @@ extension NewsListVC: NewsListPresenterOutput {
     func show(newsList: [NewsViewModel]) {
         adapter.newsList = newsList
         DispatchQueue.main.async { [ weak self] in
-//            self?.spinnerView.stopAnimating()
+            //            self?.spinnerView.stopAnimating()
             self?.tableView.reloadData()
         }
+    }
+    
+    func showError(error: LocalizedError) {
+        print("Error: \(error.localizedDescription)")
     }
 }
 
