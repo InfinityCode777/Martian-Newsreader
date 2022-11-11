@@ -11,21 +11,21 @@ class NewsListVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     var presenter: NewsListPresenter!
     private var adapter: NewsListAdapter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupTableView()
+        //        setupTableView()
         adapter = NewsListAdapter(presenter: presenter)
         setupTableView()
     }
-
+    
     override func awakeFromNib() {
         self.presenter = NewsListPresenter()
         self.presenter.output = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)        
+        super.viewWillAppear(animated)
         presenter.eventViewReady()
     }
     
@@ -35,14 +35,14 @@ class NewsListVC: UIViewController {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
     }
-
+    
 }
 
 extension NewsListVC: NewsListPresenterOutput {
     func showDetail(news: NewsViewModel) {
         let newsDetailVC = Coordinator.getNewsDetailVC()
         newsDetailVC.news = news
-        navigationController?.pushViewController(newsDetailVC, animated: true)        
+        navigationController?.pushViewController(newsDetailVC, animated: true)
     }
     
     func show(newsList: [NewsViewModel]) {

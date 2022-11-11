@@ -13,7 +13,7 @@ class NewsDetailPresenter {
     func eventLoadDetailedNews() {
         output.showNewsDetail()
     }
-
+    
     func eventViewReady() {
         eventLoadDetailedNews()
     }

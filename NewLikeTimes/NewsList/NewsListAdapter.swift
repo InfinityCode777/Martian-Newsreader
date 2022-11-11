@@ -20,7 +20,7 @@ class NewsListAdapter: NSObject {
     convenience init(presenter: NewsListPresenter) {
         self.init(newsList: [], presenter: presenter)
     }
-
+    
 }
 
 extension NewsListAdapter: UITableViewDataSource {
@@ -35,7 +35,7 @@ extension NewsListAdapter: UITableViewDataSource {
         cell.titleLabel.text = newsList[row].title
         cell.bodyLabel.text = newsList[row].body
         cell.thumbnailImageView.image = newsList[row].image
-
+        
         return cell
     }
 }
