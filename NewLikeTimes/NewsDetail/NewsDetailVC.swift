@@ -8,8 +8,13 @@
 import UIKit
 
 class NewsDetailVC: UIViewController {
+    // This should not be stored here
     var news: NewsViewModel!
     var presenter: NewsDetailPresenter!
+    
+    @IBOutlet var titelLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var bodyTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,5 +35,8 @@ extension NewsDetailVC: NewsDetailPresenterOutput {
     func showNewsDetail() {
 //    func show(newsDetail: NewsViewModel) {
         print("ahaha >>> Title >>> \(news.title)")
+        titelLabel.text = news.title
+        bodyTextView.text = news.body
+        imageView.image = news.image
     }
 }
