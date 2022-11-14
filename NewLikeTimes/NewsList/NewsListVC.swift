@@ -17,6 +17,7 @@ class NewsListVC: UIViewController {
         //        setupTableView()
         adapter = NewsListAdapter(presenter: presenter)
         setupTableView()
+        addLangBtn()
         presenter.eventViewReady()
     }
     
@@ -35,6 +36,19 @@ class NewsListVC: UIViewController {
         tableView.dataSource = adapter
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func addLangBtn() {
+        let rightNavbBarBtn = UIBarButtonItem(title: "Martian",
+                                              style: .plain,
+                                              target: self,
+                                              action: #selector(eventLangBtnTapped))
+        navigationItem.rightBarButtonItem = rightNavbBarBtn
+    }
+    
+    @objc
+    private func eventLangBtnTapped() {
+        presenter.eventLangBtnTapped()
     }
     
 }

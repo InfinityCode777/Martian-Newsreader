@@ -10,9 +10,10 @@ import UIKit
 class NewsListPresenter {
     weak var output: NewsListPresenterOutput!
     
-    func eventLoadNewsList(refreshData: Bool = false) {
+    func eventLoadNewsList(refreshData: Bool = false,
+                           lang: SupportLanguage = .en) {
         NewsManager.shared.loadAll(filename: "news_data",
-                                   lang: .mr,
+                                   lang: lang,
                                    refreshData: refreshData) {[weak self] result in
             guard
                 let self = self
@@ -39,6 +40,11 @@ class NewsListPresenter {
         // Router, use VC for now
         output.showDetail(news: news)
     }
+    
+    func eventLangBtnTapped() {
+        eventLoadNewsList(refreshData: true, lang: .mr)
+    }
+
     
     private func createViewModelList(_ domainDataList: [NewsDomainModel]) -> [NewsViewModel] {
         var newsList = [NewsViewModel]()
