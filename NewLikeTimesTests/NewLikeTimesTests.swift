@@ -60,7 +60,7 @@ class NewLikeTimesTests: XCTestCase {
         XCTAssertEqual(testNewsData[2].body, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor.")
     }
     
-    func testStringEnum() {
+    func testStringEnum() throws {
         var origEngText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 2,000 et ar2cu ac sem convallis maximus. Curabitur dictum efficitur tempor."
         
         var expMartianText = "Boinga boinga boinga sit boinga, boinga boinga boinga. Boinga 2,000 et boinga ac sem boinga boinga. Boinga boinga boinga boinga."
@@ -69,6 +69,9 @@ class NewLikeTimesTests: XCTestCase {
         //        for (idx, char) in str.enumerated() {
         //            print("\(idx), \(char)")
         //        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
         
         var res = [String]()
         var engWord = ""
@@ -93,12 +96,17 @@ class NewLikeTimesTests: XCTestCase {
                 // 2,000, eng ->
                 // num is abc
                 // current engWord is a number
-                if let _ = Int(engWord)  {
+                if let num = Int(engWord)  {
                     //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
                     if !origEngText[idx + 1].isNumber {
 //                        res.append(engWord)
 //                        res.append(String(ch))
-                        martianText += engWord + String(ch)
+                        guard
+                            let formattedNum =  formatter.string(from: NSNumber(value: num)) else {
+                            fatalError("Failed to convert num to decimal format")
+                        }
+                        
+                        martianText += formattedNum + String(ch)
                         engWord = ""
                     }
                 } else {
@@ -110,12 +118,17 @@ class NewLikeTimesTests: XCTestCase {
                 }
                 
             } else {
-                if let _ = Int(engWord)  {
+                if let num = Int(engWord)  {
                     //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
                     //                    if !engWord[idx + 1].isNumber {
 //                    res.append(engWord)
 //                    res.append(String(ch))
-                    martianText += engWord + String(ch)
+                    guard
+                        let formattedNum =  formatter.string(from: NSNumber(value: num)) else {
+                        fatalError("Failed to convert num to decimal format")
+                    }
+                    
+                    martianText += formattedNum + String(ch)
                     engWord = ""
                     //                    }
                 } else {
@@ -128,7 +141,7 @@ class NewLikeTimesTests: XCTestCase {
                 
             }
         }
-        
+//        let aa = Int("2,000") // nope
         
         XCTAssertEqual(martianText, expMartianText, "Translation error")
 //        print("ahaha")
