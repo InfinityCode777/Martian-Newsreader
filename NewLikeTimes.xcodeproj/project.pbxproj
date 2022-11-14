@@ -35,6 +35,11 @@
 		2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC6291EF670000C6993 /* TextTranslator.swift */; };
 		2D330FC9291F00CC000C6993 /* ExtString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC8291F00CC000C6993 /* ExtString.swift */; };
 		2D330FCB2922AC32000C6993 /* SupportLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FCA2922AC32000C6993 /* SupportLanguage.swift */; };
+		2D330FCF2922BC9D000C6993 /* LoadingViewAttaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FCE2922BC9D000C6993 /* LoadingViewAttaching.swift */; };
+		2D330FD12922BEC1000C6993 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD02922BEC1000C6993 /* LoadingView.swift */; };
+		2D330FD42922BF45000C6993 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D330FD32922BF45000C6993 /* Anchorage */; };
+		2D330FD62922BFEA000C6993 /* ExtUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD52922BFEA000C6993 /* ExtUIColor.swift */; };
+		2D330FD82922C0B7000C6993 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD72922C0B7000C6993 /* ExtUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,10 @@
 		2D330FC6291EF670000C6993 /* TextTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTranslator.swift; sourceTree = "<group>"; };
 		2D330FC8291F00CC000C6993 /* ExtString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtString.swift; sourceTree = "<group>"; };
 		2D330FCA2922AC32000C6993 /* SupportLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportLanguage.swift; sourceTree = "<group>"; };
+		2D330FCE2922BC9D000C6993 /* LoadingViewAttaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewAttaching.swift; sourceTree = "<group>"; };
+		2D330FD02922BEC1000C6993 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2D330FD52922BFEA000C6993 /* ExtUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColor.swift; sourceTree = "<group>"; };
+		2D330FD72922C0B7000C6993 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D330FD42922BF45000C6993 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +237,11 @@
 			children = (
 				2D330FC0291EE597000C6993 /* ExtUIImage.swift */,
 				2D330FC4291EF075000C6993 /* ErrorEnums.swift */,
+				2D330FD52922BFEA000C6993 /* ExtUIColor.swift */,
 				2D330FC8291F00CC000C6993 /* ExtString.swift */,
+				2D330FCE2922BC9D000C6993 /* LoadingViewAttaching.swift */,
+				2D330FD02922BEC1000C6993 /* LoadingView.swift */,
+				2D330FD72922C0B7000C6993 /* ExtUIView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -248,6 +262,9 @@
 			dependencies = (
 			);
 			name = NewLikeTimes;
+			packageProductDependencies = (
+				2D330FD32922BF45000C6993 /* Anchorage */,
+			);
 			productName = NewLikeTimes;
 			productReference = 2D330F622919F714000C6993 /* NewLikeTimes.app */;
 			productType = "com.apple.product-type.application";
@@ -320,6 +337,9 @@
 				Base,
 			);
 			mainGroup = 2D330F592919F714000C6993;
+			packageReferences = (
+				2D330FD22922BF45000C6993 /* XCRemoteSwiftPackageReference "Anchorage" */,
+			);
 			productRefGroup = 2D330F632919F714000C6993 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,9 +387,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */,
+				2D330FCF2922BC9D000C6993 /* LoadingViewAttaching.swift in Sources */,
 				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
 				2D330F662919F714000C6993 /* AppDelegate.swift in Sources */,
 				2D330FA8291B12B8000C6993 /* NewsManager.swift in Sources */,
+				2D330FD62922BFEA000C6993 /* ExtUIColor.swift in Sources */,
+				2D330FD12922BEC1000C6993 /* LoadingView.swift in Sources */,
 				2D330F9D291AE6FC000C6993 /* NewsListAdapter.swift in Sources */,
 				2D330FA3291B06CE000C6993 /* NewsListPresenter.swift in Sources */,
 				2D330FA1291B04F9000C6993 /* NewsListCell.swift in Sources */,
@@ -377,6 +400,7 @@
 				2D330FC1291EE597000C6993 /* ExtUIImage.swift in Sources */,
 				2D330FBE291DA7CB000C6993 /* Coordinator.swift in Sources */,
 				2D330FA5291B06E5000C6993 /* NewsListPresenterOutput.swift in Sources */,
+				2D330FD82922C0B7000C6993 /* ExtUIView.swift in Sources */,
 				2D330FC9291F00CC000C6993 /* ExtString.swift in Sources */,
 				2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */,
 				2D330FB7291DA255000C6993 /* NewsDetailPresenter.swift in Sources */,
@@ -564,6 +588,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
@@ -593,6 +618,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
@@ -728,6 +754,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D330FD22922BF45000C6993 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D330FD32922BF45000C6993 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D330FD22922BF45000C6993 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D330F5A2919F714000C6993 /* Project object */;
 }
