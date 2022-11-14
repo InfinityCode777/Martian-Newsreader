@@ -61,9 +61,9 @@ class NewLikeTimesTests: XCTestCase {
     }
     
     func testStringEnum() throws {
-        var origEngText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 2,000 et ar2cu ac sem convallis maximus. Curabitur dictum efficitur tempor."
+        var origEngText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 2,000 et ar2cu ac sem convallis maximus. Curabitur dictum efficitur tempor 20."
         
-        var expMartianText = "Boinga boinga boinga sit boinga, boinga boinga boinga. Boinga 2,000 et boinga ac sem boinga boinga. Boinga boinga boinga boinga."
+        var expMartianText = "Boinga boinga boinga sit boinga, boinga boinga boinga. Boinga 2,000 et boinga ac sem boinga boinga. Boinga boinga boinga boinga 20."
         var martianText = ""
         
         //        for (idx, char) in str.enumerated() {
@@ -73,34 +73,23 @@ class NewLikeTimesTests: XCTestCase {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         
-        var res = [String]()
         var engWord = ""
         var martianWord = ""
         
         //        for ch in engText {
         for idx in 0..<origEngText.count {
-            //        for idx = 0; idx < engText.count; idx++ {
-            //        for (idx, ch) in engText.enumerated() {
             let ch: Character = origEngText[idx]
             //            print("\(ch)")
-            // 2,000. -> num
-            // 2.     -> '/0'
-            // 2,000, eng ->
-            //            if !(ch.isLetter || (ch.isNumber && !engText[idx + 2].isNumber)) {
             if ch.isLetter || ch.isNumber {
                 engWord.append(String(ch))
-                //            } else if ch == "," {
             } else if ch == "," {
                 // 2,000. -> num
                 // 2.     -> '/0'
                 // 2,000, eng ->
-                // num is abc
+                
                 // current engWord is a number
                 if let num = Int(engWord)  {
-                    //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
                     if !origEngText[idx + 1].isNumber {
-//                        res.append(engWord)
-//                        res.append(String(ch))
                         guard
                             let formattedNum =  formatter.string(from: NSNumber(value: num)) else {
                             fatalError("Failed to convert num to decimal format")
@@ -111,18 +100,12 @@ class NewLikeTimesTests: XCTestCase {
                     }
                 } else {
                     martianWord = engWord.count > 3 ? covertToMartianWord(engWord) : engWord
-//                    res.append(martianWord)
-//                    res.append(String(ch))
                     martianText += martianWord + String(ch)
                     engWord = ""
                 }
                 
             } else {
                 if let num = Int(engWord)  {
-                    //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
-                    //                    if !engWord[idx + 1].isNumber {
-//                    res.append(engWord)
-//                    res.append(String(ch))
                     guard
                         let formattedNum =  formatter.string(from: NSNumber(value: num)) else {
                         fatalError("Failed to convert num to decimal format")
@@ -130,22 +113,19 @@ class NewLikeTimesTests: XCTestCase {
                     
                     martianText += formattedNum + String(ch)
                     engWord = ""
-                    //                    }
                 } else {
                     martianWord = engWord.count > 3 ? covertToMartianWord(engWord) : engWord
-//                    res.append(martianWord)
-//                    res.append(String(ch))
                     martianText += martianWord + String(ch)
                     engWord = ""
                 }
                 
             }
         }
-//        let aa = Int("2,000") // nope
+        //        let aa = Int("2,000") // nope
         
         XCTAssertEqual(martianText, expMartianText, "Translation error")
-//        print("ahaha")
-
+        //        print("ahaha")
+        
     }
     
     private func covertToMartianWord(_ word:String) -> String {
