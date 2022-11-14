@@ -10,6 +10,7 @@ import Foundation
 public enum DataFetchError: LocalizedError {
     case failedToDecodeJson
     case failedToLocateFile
+    case emptyModel
     case testError
     
     public var errorDescription: String? {
@@ -18,6 +19,8 @@ public enum DataFetchError: LocalizedError {
             return "Failed to decode the json"
         case .failedToLocateFile:
             return "Failed to locate file"
+        case .emptyModel:
+            return "Empty domain model"
         case .testError:
             return ""
         }

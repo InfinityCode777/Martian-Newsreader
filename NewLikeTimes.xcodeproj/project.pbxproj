@@ -32,8 +32,9 @@
 		2D330FBE291DA7CB000C6993 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FBD291DA7CB000C6993 /* Coordinator.swift */; };
 		2D330FC1291EE597000C6993 /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC0291EE597000C6993 /* ExtUIImage.swift */; };
 		2D330FC5291EF075000C6993 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC4291EF075000C6993 /* ErrorEnums.swift */; };
-		2D330FC7291EF670000C6993 /* MartianTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC6291EF670000C6993 /* MartianTranslator.swift */; };
+		2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC6291EF670000C6993 /* TextTranslator.swift */; };
 		2D330FC9291F00CC000C6993 /* ExtString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC8291F00CC000C6993 /* ExtString.swift */; };
+		2D330FCB2922AC32000C6993 /* SupportLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FCA2922AC32000C6993 /* SupportLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +84,9 @@
 		2D330FBD291DA7CB000C6993 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2D330FC0291EE597000C6993 /* ExtUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
 		2D330FC4291EF075000C6993 /* ErrorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnums.swift; sourceTree = "<group>"; };
-		2D330FC6291EF670000C6993 /* MartianTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianTranslator.swift; sourceTree = "<group>"; };
+		2D330FC6291EF670000C6993 /* TextTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTranslator.swift; sourceTree = "<group>"; };
 		2D330FC8291F00CC000C6993 /* ExtString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtString.swift; sourceTree = "<group>"; };
+		2D330FCA2922AC32000C6993 /* SupportLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,8 @@
 		2D330FA6291B12AA000C6993 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				2D330FCA2922AC32000C6993 /* SupportLanguage.swift */,
+				2D330FC6291EF670000C6993 /* TextTranslator.swift */,
 				2D330FA7291B12B8000C6993 /* NewsManager.swift */,
 				2D330FA9291B12FE000C6993 /* NewsDomainModel.swift */,
 				2D330FB2291C1782000C6993 /* news_data.json */,
@@ -223,7 +227,6 @@
 			children = (
 				2D330FC0291EE597000C6993 /* ExtUIImage.swift */,
 				2D330FC4291EF075000C6993 /* ErrorEnums.swift */,
-				2D330FC6291EF670000C6993 /* MartianTranslator.swift */,
 				2D330FC8291F00CC000C6993 /* ExtString.swift */,
 			);
 			path = Utils;
@@ -363,13 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D330FC7291EF670000C6993 /* MartianTranslator.swift in Sources */,
+				2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */,
 				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
 				2D330F662919F714000C6993 /* AppDelegate.swift in Sources */,
 				2D330FA8291B12B8000C6993 /* NewsManager.swift in Sources */,
 				2D330F9D291AE6FC000C6993 /* NewsListAdapter.swift in Sources */,
 				2D330FA3291B06CE000C6993 /* NewsListPresenter.swift in Sources */,
 				2D330FA1291B04F9000C6993 /* NewsListCell.swift in Sources */,
+				2D330FCB2922AC32000C6993 /* SupportLanguage.swift in Sources */,
 				2D330FC1291EE597000C6993 /* ExtUIImage.swift in Sources */,
 				2D330FBE291DA7CB000C6993 /* Coordinator.swift in Sources */,
 				2D330FA5291B06E5000C6993 /* NewsListPresenterOutput.swift in Sources */,

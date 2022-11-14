@@ -28,6 +28,7 @@ class NewLikeTimesTests: XCTestCase {
         //        guard
         let testBundle = Bundle(for: type(of: self))
         newsManager.loadAll(filename: "test_news_data",
+                            lang: .mr,
                             bundle: testBundle) {[weak self] result in
             switch result {
             case .success(let domainData):
@@ -64,7 +65,9 @@ class NewLikeTimesTests: XCTestCase {
         let origEngText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 2,000 et ar2cu ac sem convallis maximus. Curabitur dictum efficitur tempor 20."
         
         let expMartianText = "Boinga boinga boinga sit boinga, boinga boinga boinga. Boinga 2,000 et boinga ac sem boinga boinga. Boinga boinga boinga boinga 20."
-        let martianText = MartianTranslator.shared.getMartian(origEngText)
+        let martianText = TextTranslator.shared.getTranslation(origEngText,
+                                                               fromLang: .en,
+                                                               toLang: .mr)
         
         //        for (idx, char) in str.enumerated() {
         //            print("\(idx), \(char)")

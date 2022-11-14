@@ -17,6 +17,7 @@ class NewsListVC: UIViewController {
         //        setupTableView()
         adapter = NewsListAdapter(presenter: presenter)
         setupTableView()
+        presenter.eventViewReady()
     }
     
     override func awakeFromNib() {
@@ -26,7 +27,7 @@ class NewsListVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.eventViewReady()
+//        presenter.eventViewReady()
     }
     
     private func setupTableView() {

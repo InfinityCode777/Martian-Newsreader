@@ -7,12 +7,14 @@
 
 import Foundation
 
-class MartianTranslator {
-    static var shared = MartianTranslator()
+class TextTranslator {
+    static var shared = TextTranslator()
     
     private init() {}
     
-    func getMartian(_ origEngText: String) -> String {
+    func getTranslation(_ origEngText: String,
+                    fromLang: SupportLanguage,
+                    toLang: SupportLanguage) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         

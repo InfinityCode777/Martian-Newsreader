@@ -10,8 +10,10 @@ import UIKit
 class NewsListPresenter {
     weak var output: NewsListPresenterOutput!
     
-    func eventLoadNewsList() {
-        NewsManager.shared.loadAll(filename: "news_data") {[weak self] result in
+    func eventLoadNewsList(refreshData: Bool = false) {
+        NewsManager.shared.loadAll(filename: "news_data",
+                                   lang: .mr,
+                                   refreshData: refreshData) {[weak self] result in
             guard
                 let self = self
             else {
@@ -30,7 +32,7 @@ class NewsListPresenter {
     }
     
     func eventViewReady() {
-        eventLoadNewsList()
+        eventLoadNewsList(refreshData: true)
     }
     
     func eventItemSelected(news: NewsViewModel) {
