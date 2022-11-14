@@ -183,11 +183,11 @@
 			isa = PBXGroup;
 			children = (
 				2D330F692919F714000C6993 /* NewsListVC.swift */,
+				2D330FA2291B06CE000C6993 /* NewsListPresenter.swift */,
 				2D330F9E291AE774000C6993 /* NewsViewModel.swift */,
 				2D330FA0291B04F9000C6993 /* NewsListCell.swift */,
 				2D330F6B2919F714000C6993 /* NewsList.storyboard */,
 				2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */,
-				2D330FA2291B06CE000C6993 /* NewsListPresenter.swift */,
 				2D330FA4291B06E5000C6993 /* NewsListPresenterOutput.swift */,
 			);
 			path = NewsList;

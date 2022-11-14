@@ -12,4 +12,5 @@ struct NewsViewModel {
     var title: String
     var body: String
     var image: UIImage
+    var lang: SupportLanguage
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsDetailVC: UIViewController {
+class NewsDetailVC: UIViewController, LoadingViewAttaching {
     // This should not be stored here
     var news: NewsViewModel!
     var presenter: NewsDetailPresenter!
@@ -15,9 +15,12 @@ class NewsDetailVC: UIViewController {
     @IBOutlet var titelLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var bodyTextView: UITextView!
+    private var loadingView: LoadingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingView = attachLoadingView()
+        presenter.eventViewReady()
     }
     
     override func awakeFromNib() {
@@ -27,7 +30,6 @@ class NewsDetailVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.eventViewReady()
     }
 }
 
