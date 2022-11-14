@@ -32,6 +32,8 @@
 		2D330FBE291DA7CB000C6993 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FBD291DA7CB000C6993 /* Coordinator.swift */; };
 		2D330FC1291EE597000C6993 /* ExtUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC0291EE597000C6993 /* ExtUIImage.swift */; };
 		2D330FC5291EF075000C6993 /* ErrorEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC4291EF075000C6993 /* ErrorEnums.swift */; };
+		2D330FC7291EF670000C6993 /* MartianTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC6291EF670000C6993 /* MartianTranslator.swift */; };
+		2D330FC9291F00CC000C6993 /* ExtString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FC8291F00CC000C6993 /* ExtString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		2D330FBD291DA7CB000C6993 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2D330FC0291EE597000C6993 /* ExtUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIImage.swift; sourceTree = "<group>"; };
 		2D330FC4291EF075000C6993 /* ErrorEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEnums.swift; sourceTree = "<group>"; };
+		2D330FC6291EF670000C6993 /* MartianTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianTranslator.swift; sourceTree = "<group>"; };
+		2D330FC8291F00CC000C6993 /* ExtString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 			children = (
 				2D330FC0291EE597000C6993 /* ExtUIImage.swift */,
 				2D330FC4291EF075000C6993 /* ErrorEnums.swift */,
+				2D330FC6291EF670000C6993 /* MartianTranslator.swift */,
+				2D330FC8291F00CC000C6993 /* ExtString.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D330FC7291EF670000C6993 /* MartianTranslator.swift in Sources */,
 				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
 				2D330F662919F714000C6993 /* AppDelegate.swift in Sources */,
 				2D330FA8291B12B8000C6993 /* NewsManager.swift in Sources */,
@@ -366,6 +373,7 @@
 				2D330FC1291EE597000C6993 /* ExtUIImage.swift in Sources */,
 				2D330FBE291DA7CB000C6993 /* Coordinator.swift in Sources */,
 				2D330FA5291B06E5000C6993 /* NewsListPresenterOutput.swift in Sources */,
+				2D330FC9291F00CC000C6993 /* ExtString.swift in Sources */,
 				2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */,
 				2D330FB7291DA255000C6993 /* NewsDetailPresenter.swift in Sources */,
 				2D330FB9291DA264000C6993 /* NewsDetailPresenterOutput.swift in Sources */,

@@ -59,11 +59,103 @@ class NewLikeTimesTests: XCTestCase {
         XCTAssertEqual(testNewsData[2].images[1].height, 80, "Heights do not match")
         XCTAssertEqual(testNewsData[2].body, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et arcu ac sem convallis maximus. Curabitur dictum efficitur tempor.")
     }
+    
+    func testStringEnum() {
+        var origEngText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum 2,000 et ar2cu ac sem convallis maximus. Curabitur dictum efficitur tempor."
+        
+        var expMartianText = "Boinga boinga boinga sit boinga, boinga boinga boinga. Boinga 2,000 et boinga ac sem boinga boinga. Boinga boinga boinga boinga."
+        var martianText = ""
+        
+        //        for (idx, char) in str.enumerated() {
+        //            print("\(idx), \(char)")
+        //        }
+        
+        var res = [String]()
+        var engWord = ""
+        var martianWord = ""
+        
+        //        for ch in engText {
+        for idx in 0..<origEngText.count {
+            //        for idx = 0; idx < engText.count; idx++ {
+            //        for (idx, ch) in engText.enumerated() {
+            let ch: Character = origEngText[idx]
+            //            print("\(ch)")
+            // 2,000. -> num
+            // 2.     -> '/0'
+            // 2,000, eng ->
+            //            if !(ch.isLetter || (ch.isNumber && !engText[idx + 2].isNumber)) {
+            if ch.isLetter || ch.isNumber {
+                engWord.append(String(ch))
+                //            } else if ch == "," {
+            } else if ch == "," {
+                // 2,000. -> num
+                // 2.     -> '/0'
+                // 2,000, eng ->
+                // num is abc
+                // current engWord is a number
+                if let _ = Int(engWord)  {
+                    //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
+                    if !origEngText[idx + 1].isNumber {
+//                        res.append(engWord)
+//                        res.append(String(ch))
+                        martianText += engWord + String(ch)
+                        engWord = ""
+                    }
+                } else {
+                    martianWord = engWord.count > 3 ? covertToMartianWord(engWord) : engWord
+//                    res.append(martianWord)
+//                    res.append(String(ch))
+                    martianText += martianWord + String(ch)
+                    engWord = ""
+                }
+                
+            } else {
+                if let _ = Int(engWord)  {
+                    //                    if idx == engText.count - 1 || !engWord[idx + 1].isNumber {
+                    //                    if !engWord[idx + 1].isNumber {
+//                    res.append(engWord)
+//                    res.append(String(ch))
+                    martianText += engWord + String(ch)
+                    engWord = ""
+                    //                    }
+                } else {
+                    martianWord = engWord.count > 3 ? covertToMartianWord(engWord) : engWord
+//                    res.append(martianWord)
+//                    res.append(String(ch))
+                    martianText += martianWord + String(ch)
+                    engWord = ""
+                }
+                
+            }
+        }
+        
+        
+        XCTAssertEqual(martianText, expMartianText, "Translation error")
+//        print("ahaha")
 
+    }
+    
+    private func covertToMartianWord(_ word:String) -> String {
+        let encryption1 = "Boinga"
+        let encryption2 = "boinga"
+
+        // e.g. 2,500
+        var martianWord = ""
+        if let _ = Int(word) {
+            return word
+        }
+        
+        if word.count <= 3 {
+            martianWord = word
+        } else {
+            return word.first?.isUppercase == true ? encryption1 : encryption2
+        }
+        return martianWord
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+    self.measure {
             // Put the code you want to measure the time of here.
         }
     }
