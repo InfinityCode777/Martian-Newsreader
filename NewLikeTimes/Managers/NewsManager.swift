@@ -13,6 +13,8 @@ class NewsManager {
     public private(set) var model = [NewsDomainModel]()
     
     public static let shared = NewsManager()
+    
+    private let dataAccessQ = DispatchQueue(label: "com.newLikeTimes.dataAccessQ", qos: .userInitiated)
         
     func loadAll(filename fileName: String,
                  lang: SupportLanguage = .en,
@@ -36,22 +38,26 @@ class NewsManager {
             return
         }
         
-        do {
-            let data = try Data(contentsOf: url)
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let jsonData = try decoder.decode([NewsDomainModel].self, from: data)
-            if (lang != .en) {
-                let tranlatedJsonData = translateDomainModel(jsonData, to: lang)
-                model = tranlatedJsonData
-                completion(.success(tranlatedJsonData))
-            } else {
-                model = jsonData
-                completion(.success(jsonData))
+        dataAccessQ.async { [weak self] in
+            guard let self = self else { fatalError("Failed to get instance of \(NewsManager.self)")}
+            
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let jsonData = try decoder.decode([NewsDomainModel].self, from: data)
+                if (lang != .en) {
+                    let tranlatedJsonData = self.translateDomainModel(jsonData, to: lang)
+                    self.model = tranlatedJsonData
+                    completion(.success(tranlatedJsonData))
+                } else {
+                    self.model = jsonData
+                    completion(.success(jsonData))
+                }
+            } catch {
+                print("error:\(error)")
+                completion(.failure(.failedToDecodeJson))
             }
-        } catch {
-            print("error:\(error)")
-            completion(.failure(.failedToDecodeJson))
         }
     }
     

@@ -7,17 +7,19 @@
 
 import UIKit
 
-class NewsListVC: UIViewController {
+class NewsListVC: UIViewController, LoadingViewAttaching {
     @IBOutlet var tableView: UITableView!
     var presenter: NewsListPresenter!
     private var adapter: NewsListAdapter!
+    private var loadingView: LoadingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        setupTableView()
+        loadingView = attachLoadingView()
         adapter = NewsListAdapter(presenter: presenter)
         setupTableView()
         addLangBtn()
+        loadingView.show()
         presenter.eventViewReady()
     }
     
@@ -48,7 +50,12 @@ class NewsListVC: UIViewController {
     
     @objc
     private func eventLangBtnTapped() {
+        loadingView.show()
         presenter.eventLangBtnTapped()
+//        _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self]
+//             timer in
+//            self?.loadingView.dismiss()
+//        }
     }
     
 }
@@ -65,6 +72,7 @@ extension NewsListVC: NewsListPresenterOutput {
         DispatchQueue.main.async { [ weak self] in
             //            self?.spinnerView.stopAnimating()
             self?.tableView.reloadData()
+            self?.loadingView.dismiss()
         }
     }
     
