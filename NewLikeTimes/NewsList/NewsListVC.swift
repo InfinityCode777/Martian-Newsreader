@@ -38,8 +38,9 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     private func setupTableView() {
         tableView.delegate = adapter
         tableView.dataSource = adapter
-        tableView.estimatedRowHeight = 225
+        tableView.estimatedRowHeight = 216
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
     }
     
     private func addLangBtn() {
@@ -48,6 +49,7 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
                                               target: self,
                                               action: #selector(eventToggleLang))
         self.rightNavBtn = navigationItem.rightBarButtonItem
+        self.rightNavBtn.tintColor  = .black
     }
     
     @objc
@@ -58,6 +60,7 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     }
     
     private func setupNavBar() {
+        navigationController?.navigationBar.tintColor = .black
         navigationItem.title = "For You"
         addLangBtn()
     }
