@@ -64,7 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D330F622919F714000C6993 /* NewLikeTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewLikeTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D330F622919F714000C6993 /* MartianNewsreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MartianNewsreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D330F652919F714000C6993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D330F672919F714000C6993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D330F692919F714000C6993 /* NewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListVC.swift; sourceTree = "<group>"; };
@@ -72,9 +72,9 @@
 		2D330F6E2919F714000C6993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D330F712919F714000C6993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D330F732919F714000C6993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D330F782919F714000C6993 /* NewLikeTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewLikeTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D330F782919F714000C6993 /* MartianNewsreaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianNewsreaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D330F7C2919F714000C6993 /* NewLikeTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesTests.swift; sourceTree = "<group>"; };
-		2D330F822919F715000C6993 /* NewLikeTimesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewLikeTimesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D330F822919F715000C6993 /* MartianNewsreaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianNewsreaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITests.swift; sourceTree = "<group>"; };
 		2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D330F952919F755000C6993 /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
@@ -145,9 +145,9 @@
 		2D330F632919F714000C6993 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D330F622919F714000C6993 /* NewLikeTimes.app */,
-				2D330F782919F714000C6993 /* NewLikeTimesTests.xctest */,
-				2D330F822919F715000C6993 /* NewLikeTimesUITests.xctest */,
+				2D330F622919F714000C6993 /* MartianNewsreader.app */,
+				2D330F782919F714000C6993 /* MartianNewsreaderTests.xctest */,
+				2D330F822919F715000C6993 /* MartianNewsreaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,9 +269,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D330F612919F714000C6993 /* NewLikeTimes */ = {
+		2D330F612919F714000C6993 /* MartianNewsreader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D330F8C2919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimes" */;
+			buildConfigurationList = 2D330F8C2919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreader" */;
 			buildPhases = (
 				2D330F5E2919F714000C6993 /* Sources */,
 				2D330F5F2919F714000C6993 /* Frameworks */,
@@ -281,17 +281,17 @@
 			);
 			dependencies = (
 			);
-			name = NewLikeTimes;
+			name = MartianNewsreader;
 			packageProductDependencies = (
 				2D330FD32922BF45000C6993 /* Anchorage */,
 			);
 			productName = NewLikeTimes;
-			productReference = 2D330F622919F714000C6993 /* NewLikeTimes.app */;
+			productReference = 2D330F622919F714000C6993 /* MartianNewsreader.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D330F772919F714000C6993 /* NewLikeTimesTests */ = {
+		2D330F772919F714000C6993 /* MartianNewsreaderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D330F8F2919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimesTests" */;
+			buildConfigurationList = 2D330F8F2919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreaderTests" */;
 			buildPhases = (
 				2D330F742919F714000C6993 /* Sources */,
 				2D330F752919F714000C6993 /* Frameworks */,
@@ -302,14 +302,14 @@
 			dependencies = (
 				2D330F7A2919F714000C6993 /* PBXTargetDependency */,
 			);
-			name = NewLikeTimesTests;
+			name = MartianNewsreaderTests;
 			productName = NewLikeTimesTests;
-			productReference = 2D330F782919F714000C6993 /* NewLikeTimesTests.xctest */;
+			productReference = 2D330F782919F714000C6993 /* MartianNewsreaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D330F812919F715000C6993 /* NewLikeTimesUITests */ = {
+		2D330F812919F715000C6993 /* MartianNewsreaderUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D330F922919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimesUITests" */;
+			buildConfigurationList = 2D330F922919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreaderUITests" */;
 			buildPhases = (
 				2D330F7E2919F715000C6993 /* Sources */,
 				2D330F7F2919F715000C6993 /* Frameworks */,
@@ -320,9 +320,9 @@
 			dependencies = (
 				2D330F842919F715000C6993 /* PBXTargetDependency */,
 			);
-			name = NewLikeTimesUITests;
+			name = MartianNewsreaderUITests;
 			productName = NewLikeTimesUITests;
-			productReference = 2D330F822919F715000C6993 /* NewLikeTimesUITests.xctest */;
+			productReference = 2D330F822919F715000C6993 /* MartianNewsreaderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +348,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2D330F5D2919F714000C6993 /* Build configuration list for PBXProject "NewLikeTimes" */;
+			buildConfigurationList = 2D330F5D2919F714000C6993 /* Build configuration list for PBXProject "MartianNewsreader" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -364,9 +364,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D330F612919F714000C6993 /* NewLikeTimes */,
-				2D330F772919F714000C6993 /* NewLikeTimesTests */,
-				2D330F812919F715000C6993 /* NewLikeTimesUITests */,
+				2D330F612919F714000C6993 /* MartianNewsreader */,
+				2D330F772919F714000C6993 /* MartianNewsreaderTests */,
+				2D330F812919F715000C6993 /* MartianNewsreaderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -458,12 +458,12 @@
 /* Begin PBXTargetDependency section */
 		2D330F7A2919F714000C6993 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D330F612919F714000C6993 /* NewLikeTimes */;
+			target = 2D330F612919F714000C6993 /* MartianNewsreader */;
 			targetProxy = 2D330F792919F714000C6993 /* PBXContainerItemProxy */;
 		};
 		2D330F842919F715000C6993 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D330F612919F714000C6993 /* NewLikeTimes */;
+			target = 2D330F612919F714000C6993 /* MartianNewsreader */;
 			targetProxy = 2D330F832919F715000C6993 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -624,7 +624,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Martian.Newsreader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jing.Martian.Newsreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -654,7 +654,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Martian.Newsreader;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jing.Martian.Newsreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -678,7 +678,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewLikeTimes.app/NewLikeTimes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MartianNewsreader.app/MartianNewsreader";
 			};
 			name = Debug;
 		};
@@ -698,7 +698,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewLikeTimes.app/NewLikeTimes";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MartianNewsreader.app/MartianNewsreader";
 			};
 			name = Release;
 		};
@@ -741,7 +741,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D330F5D2919F714000C6993 /* Build configuration list for PBXProject "NewLikeTimes" */ = {
+		2D330F5D2919F714000C6993 /* Build configuration list for PBXProject "MartianNewsreader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D330F8A2919F715000C6993 /* Debug */,
@@ -750,7 +750,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D330F8C2919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimes" */ = {
+		2D330F8C2919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D330F8D2919F715000C6993 /* Debug */,
@@ -759,7 +759,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D330F8F2919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimesTests" */ = {
+		2D330F8F2919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D330F902919F715000C6993 /* Debug */,
@@ -768,7 +768,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D330F922919F715000C6993 /* Build configuration list for PBXNativeTarget "NewLikeTimesUITests" */ = {
+		2D330F922919F715000C6993 /* Build configuration list for PBXNativeTarget "MartianNewsreaderUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D330F932919F715000C6993 /* Debug */,
