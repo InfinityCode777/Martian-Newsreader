@@ -38,7 +38,7 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     private func setupTableView() {
         tableView.delegate = adapter
         tableView.dataSource = adapter
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 225
         tableView.rowHeight = UITableView.automaticDimension
     }
     
