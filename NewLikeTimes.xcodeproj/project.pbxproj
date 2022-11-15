@@ -43,6 +43,7 @@
 		2D330FDB292332FF000C6993 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDA292332FF000C6993 /* AppState.swift */; };
 		2D330FDE29234F30000C6993 /* NewsListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDD29234F30000C6993 /* NewsListPageViewModel.swift */; };
 		2D330FE029244974000C6993 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDF29244974000C6993 /* BaseAPI.swift */; };
+		2D330FE229244B77000C6993 /* RefreshControlAttaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FE129244B77000C6993 /* RefreshControlAttaching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		2D330FDA292332FF000C6993 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D330FDD29234F30000C6993 /* NewsListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPageViewModel.swift; sourceTree = "<group>"; };
 		2D330FDF29244974000C6993 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		2D330FE129244B77000C6993 /* RefreshControlAttaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlAttaching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				2D330FCE2922BC9D000C6993 /* LoadingViewAttaching.swift */,
 				2D330FD02922BEC1000C6993 /* LoadingView.swift */,
 				2D330FD72922C0B7000C6993 /* ExtUIView.swift */,
+				2D330FE129244B77000C6993 /* RefreshControlAttaching.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D330FE229244B77000C6993 /* RefreshControlAttaching.swift in Sources */,
 				2D330FDE29234F30000C6993 /* NewsListPageViewModel.swift in Sources */,
 				2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */,
 				2D330FCF2922BC9D000C6993 /* LoadingViewAttaching.swift in Sources */,

@@ -7,11 +7,12 @@
 
 import UIKit
 
-class NewsListVC: UIViewController, LoadingViewAttaching {
+class NewsListVC: UIViewController, LoadingViewAttaching, RefreshControlAttaching {
     @IBOutlet var tableView: UITableView!
     var presenter: NewsListPresenter!
     private var adapter: NewsListAdapter!
     private var loadingView: LoadingView!
+    private var refreshControl: UIRefreshControl!
     private var rightNavBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -20,7 +21,6 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
         adapter = NewsListAdapter(presenter: presenter)
         setupNavBar()
         setupTableView()
-//        addLangBtn()
         loadingView.show()
         presenter.eventViewReady()
     }
@@ -41,6 +41,13 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
         tableView.estimatedRowHeight = 216
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
+        refreshControl = attachRefreshControl(to: tableView, onPull: #selector(pullToRefresh))
+    }
+    
+    @objc
+    private func pullToRefresh() {
+//        presenter.eventLoadNewsListPage()
+        presenter.eventLoadNewsListPage(refreshData: true)
     }
     
     private func addLangBtn() {
@@ -76,15 +83,20 @@ extension NewsListVC: NewsListPresenterOutput {
     func showNewsListPage(_ newsPage: NewsListPageViewModel) {
         adapter.newsList = newsPage.newsEntryList
         DispatchQueue.main.async { [ weak self] in
-            self?.tableView.reloadData()
-            self?.navigationItem.rightBarButtonItem?.title = newsPage.langBtnTitle
-            self?.loadingView.dismiss()
-            self?.rightNavBtn.isEnabled = true
+            guard let self = self else { fatalError("Failed to get instance of \(NewsListVC.self)") }
+            self.tableView.reloadData()
+            self.navigationItem.rightBarButtonItem?.title = newsPage.langBtnTitle
+            self.loadingView.dismiss()
+            self.refreshControl.endRefreshing()
+            self.rightNavBtn.isEnabled = true
         }
     }
     
     func showError(_ error: LocalizedError) {
         print("Error: \(error.localizedDescription)")
+        self.loadingView.dismiss()
+        self.refreshControl.endRefreshing()
+        self.rightNavBtn.isEnabled = true
     }
 }
 
