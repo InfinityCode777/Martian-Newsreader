@@ -612,7 +612,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Martian Newsreader";
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
@@ -642,7 +642,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Martian Newsreader";
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
