@@ -31,12 +31,18 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tpc-Vy-yGL">
                                                     <rect key="frame" x="10.5" y="8" width="393" height="184"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-bW-lcL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-z5-M3k" userLabel="Spacer">
+                                                            <rect key="frame" x="76.5" y="0.0" width="240" height="8"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="8" id="dtt-lT-E6T"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="flQ-bW-lcL">
+                                                            <rect key="frame" x="0.0" y="8" width="393" height="68"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook plans to raise $10.6 billions in mega IPO" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="126-0h-Pwt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="84"/>
-                                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="277.5" height="68"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="90" id="Osn-0N-w3a"/>
                                                                     </constraints>
@@ -45,7 +51,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-cy-uAZ">
-                                                                    <rect key="frame" x="260" y="0.0" width="133" height="84"/>
+                                                                    <rect key="frame" x="285.5" y="0.0" width="107.5" height="68"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="iFe-cy-uAZ" secondAttribute="height" multiplier="450:284" id="6Go-0f-e7T"/>
                                                                         <constraint firstAttribute="height" constant="100" id="H0j-R7-St1"/>
@@ -54,8 +60,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwu-93-ax9">
-                                                            <rect key="frame" x="0.0" y="84" width="393" height="100"/>
-                                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                            <rect key="frame" x="0.0" y="76" width="393" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="dc7-b8-ybS"/>
                                                             </constraints>
@@ -63,6 +68,13 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJy-7m-0cp" userLabel="Spacer">
+                                                            <rect key="frame" x="76.5" y="176" width="240" height="8"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="8" id="qZS-VA-4En"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -71,7 +83,7 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.84999999999999998" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.87606534090909094" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="tpc-Vy-yGL" firstAttribute="centerX" secondItem="GqS-2F-qVd" secondAttribute="centerX" id="3IV-hZ-h9B"/>
                                                 <constraint firstItem="tpc-Vy-yGL" firstAttribute="top" secondItem="GqS-2F-qVd" secondAttribute="top" constant="8" id="bx5-F4-ONL"/>
@@ -128,9 +140,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
