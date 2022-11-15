@@ -17,4 +17,5 @@ class AppState {
     }
     var domainDataList = [NewsDomainModel]()
     var selectedDomainData: NewsDomainModel?
+    var lang: SupportLanguage = .en
 }

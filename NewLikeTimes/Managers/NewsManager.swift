@@ -17,8 +17,8 @@ class NewsManager {
     private let dataAccessQ = DispatchQueue(label: "com.newLikeTimes.dataAccessQ", qos: .userInitiated)
         
     func loadAll(filename fileName: String,
-                 lang: SupportLanguage = .en,
                  refreshData: Bool = false,
+                 lang: SupportLanguage = .en,
                  bundle: Bundle = .main,
                  completion: @escaping (Result<[NewsDomainModel], DataFetchError>) -> ()){
         
@@ -45,7 +45,13 @@ class NewsManager {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let jsonData = try decoder.decode([NewsDomainModel].self, from: data)
+                var jsonData = try decoder.decode([NewsDomainModel].self, from: data)
+                
+                // Simulate that we can get info from backend
+                for idx in 0..<jsonData.count {
+                    jsonData[idx].lang = lang.rawValue
+                }
+                
                 if (lang != .en) {
                     let tranlatedJsonData = self.translateDomainModel(jsonData, to: lang)
                     self.model = tranlatedJsonData

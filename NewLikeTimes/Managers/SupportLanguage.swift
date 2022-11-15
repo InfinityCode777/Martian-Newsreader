@@ -7,7 +7,16 @@
 
 import Foundation
 
-enum SupportLanguage: String, CaseIterable {
-    case en = "English"
-    case mr = "Martian"
+enum SupportLanguage: String, CaseIterable, CustomStringConvertible {
+    case en
+    case mr
+    
+    var description: String {
+        switch self {
+        case .en:
+            return "English"
+        case .mr:
+            return "Martian"
+        }
+    }
 }

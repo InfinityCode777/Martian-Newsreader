@@ -9,5 +9,5 @@ import Foundation
 
 protocol NewsDetailPresenterOutput: AnyObject {
     //    func show(newsDetail: NewsViewModel)
-    func showNewsDetail(_ news: NewsViewModel)
+    func showNewsDetail(_ news: NewsEntryViewModel)
 }

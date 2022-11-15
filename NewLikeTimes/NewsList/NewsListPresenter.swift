@@ -18,19 +18,21 @@ class NewsListPresenter {
     func eventLoadNewsList(refreshData: Bool = false,
                            lang: SupportLanguage = .en) {
         NewsManager.shared.loadAll(filename: "news_data",
-                                   lang: lang,
-                                   refreshData: refreshData) {[weak self] result in
+                                   refreshData: refreshData,
+                                   lang: lang) {[weak self] result in
             guard
                 let self = self
             else {
                 fatalError("Failed to self in a guard closure")
             }
             
+            let displayLang: SupportLanguage = lang == .en ? .mr : .en
+            
             switch result {
-            case .success(let domainData):
-                self.appState.domainDataList = domainData
-                let newsList = NewsViewModel.createViewModelList(domainData)
-                self.output.showNewsList(newsList)
+            case .success(let domainDataList):
+                self.appState.domainDataList = domainDataList
+                let newsListPage = NewsListPageViewModel.createPageViewModel(domainDataList: domainDataList, langBtnTitle: displayLang.description)
+                self.output.showNewsListPage(newsListPage)
             case .failure(let error):
                 self.output.showError(error)
                 break
@@ -39,7 +41,7 @@ class NewsListPresenter {
     }
     
     func eventViewReady() {
-        eventLoadNewsList(refreshData: true)
+        eventLoadNewsList(refreshData: true, lang: appState.lang)
     }
     
     func eventItemSelected(selectedIdx: Int) {
@@ -47,7 +49,8 @@ class NewsListPresenter {
         output.showNewsDetailPage()
     }
     
-    func eventLangBtnTapped() {
-        eventLoadNewsList(refreshData: true, lang: .mr)
+    func eventToggleLang() {
+        appState.lang = appState.lang == .en ? .mr : .en
+        eventViewReady()
     }
 }

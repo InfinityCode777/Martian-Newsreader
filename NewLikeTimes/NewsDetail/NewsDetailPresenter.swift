@@ -14,7 +14,7 @@ class NewsDetailPresenter {
     init(appState: AppState = .shared) {
         self.appState = appState
     }
-
+    
     func eventLoadNewsDetail() {
         guard
             let domainData = appState.selectedDomainData
@@ -22,7 +22,8 @@ class NewsDetailPresenter {
             return
         }
         
-        let news = NewsViewModel.createViewModel(domainData)
+        //        let newsPage = NewsListPageViewModel.createPageViewModel(domainDataList: appState.domainDataList, langBtnTitle: appState.lang.rawValue)
+        let news = NewsListPageViewModel.createEntryViewModel(domainData)
         output.showNewsDetail(news)
     }
     

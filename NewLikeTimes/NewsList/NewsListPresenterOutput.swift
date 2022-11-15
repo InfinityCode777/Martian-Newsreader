@@ -8,9 +8,9 @@
 import Foundation
 
 protocol NewsListPresenterOutput: AnyObject {
-    func showNewsList(_ newsList: [NewsViewModel])
+    func showNewsListPage(_ newsListPage: NewsListPageViewModel)
     func showError(_ error: LocalizedError)
-
+    
     // Navigation, should be in router, simplified and put it here for now
-    func showNewsDetailPage()    
+    func showNewsDetailPage()
 }

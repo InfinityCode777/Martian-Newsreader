@@ -18,7 +18,7 @@
 		2D330F892919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */; };
 		2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F952919F755000C6993 /* NewsDetailVC.swift */; };
 		2D330F9D291AE6FC000C6993 /* NewsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */; };
-		2D330F9F291AE774000C6993 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F9E291AE774000C6993 /* NewsViewModel.swift */; };
+		2D330F9F291AE774000C6993 /* NewsEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F9E291AE774000C6993 /* NewsEntryViewModel.swift */; };
 		2D330FA1291B04F9000C6993 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FA0291B04F9000C6993 /* NewsListCell.swift */; };
 		2D330FA3291B06CE000C6993 /* NewsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FA2291B06CE000C6993 /* NewsListPresenter.swift */; };
 		2D330FA5291B06E5000C6993 /* NewsListPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FA4291B06E5000C6993 /* NewsListPresenterOutput.swift */; };
@@ -41,6 +41,7 @@
 		2D330FD62922BFEA000C6993 /* ExtUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD52922BFEA000C6993 /* ExtUIColor.swift */; };
 		2D330FD82922C0B7000C6993 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD72922C0B7000C6993 /* ExtUIView.swift */; };
 		2D330FDB292332FF000C6993 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDA292332FF000C6993 /* AppState.swift */; };
+		2D330FDE29234F30000C6993 /* NewsListPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDD29234F30000C6993 /* NewsListPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 		2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D330F952919F755000C6993 /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListAdapter.swift; sourceTree = "<group>"; };
-		2D330F9E291AE774000C6993 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		2D330F9E291AE774000C6993 /* NewsEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntryViewModel.swift; sourceTree = "<group>"; };
 		2D330FA0291B04F9000C6993 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		2D330FA2291B06CE000C6993 /* NewsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenter.swift; sourceTree = "<group>"; };
 		2D330FA4291B06E5000C6993 /* NewsListPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterOutput.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		2D330FD52922BFEA000C6993 /* ExtUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColor.swift; sourceTree = "<group>"; };
 		2D330FD72922C0B7000C6993 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
 		2D330FDA292332FF000C6993 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2D330FDD29234F30000C6993 /* NewsListPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +189,8 @@
 			children = (
 				2D330F692919F714000C6993 /* NewsListVC.swift */,
 				2D330FA2291B06CE000C6993 /* NewsListPresenter.swift */,
-				2D330F9E291AE774000C6993 /* NewsViewModel.swift */,
+				2D330F9E291AE774000C6993 /* NewsEntryViewModel.swift */,
+				2D330FDD29234F30000C6993 /* NewsListPageViewModel.swift */,
 				2D330FA0291B04F9000C6993 /* NewsListCell.swift */,
 				2D330F6B2919F714000C6993 /* NewsList.storyboard */,
 				2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */,
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D330FDE29234F30000C6993 /* NewsListPageViewModel.swift in Sources */,
 				2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */,
 				2D330FCF2922BC9D000C6993 /* LoadingViewAttaching.swift in Sources */,
 				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
@@ -420,7 +424,7 @@
 				2D330FAA291B12FE000C6993 /* NewsDomainModel.swift in Sources */,
 				2D330FC5291EF075000C6993 /* ErrorEnums.swift in Sources */,
 				2D330F682919F714000C6993 /* SceneDelegate.swift in Sources */,
-				2D330F9F291AE774000C6993 /* NewsViewModel.swift in Sources */,
+				2D330F9F291AE774000C6993 /* NewsEntryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,7 +604,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian Newsreader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
@@ -612,7 +616,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jing.NewLikeTimes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Martian.Newsreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -630,7 +634,7 @@
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewLikeTimes/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
+				INFOPLIST_KEY_CFBundleDisplayName = "Martian Newsreader";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = NewsList;
@@ -642,7 +646,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jing.NewLikeTimes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Martian.Newsreader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

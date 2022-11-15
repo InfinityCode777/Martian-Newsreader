@@ -9,10 +9,10 @@
 import UIKit
 
 class NewsListAdapter: NSObject {
-    var newsList: [NewsViewModel]
+    var newsList: [NewsEntryViewModel]
     var presenter: NewsListPresenter
     
-    init(newsList: [NewsViewModel], presenter: NewsListPresenter) {
+    init(newsList: [NewsEntryViewModel], presenter: NewsListPresenter) {
         self.newsList = newsList
         self.presenter = presenter
     }

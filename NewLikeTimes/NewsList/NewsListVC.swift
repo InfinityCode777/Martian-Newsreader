@@ -12,13 +12,15 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     var presenter: NewsListPresenter!
     private var adapter: NewsListAdapter!
     private var loadingView: LoadingView!
+    private var rightNavBtn: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadingView = attachLoadingView()
         adapter = NewsListAdapter(presenter: presenter)
+        setupNavBar()
         setupTableView()
-        addLangBtn()
+//        addLangBtn()
         loadingView.show()
         presenter.eventViewReady()
     }
@@ -30,7 +32,7 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        presenter.eventViewReady()
+        //        presenter.eventViewReady()
     }
     
     private func setupTableView() {
@@ -41,21 +43,23 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
     }
     
     private func addLangBtn() {
-        let rightNavbBarBtn = UIBarButtonItem(title: "Martian",
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Martian",
                                               style: .plain,
                                               target: self,
-                                              action: #selector(eventLangBtnTapped))
-        navigationItem.rightBarButtonItem = rightNavbBarBtn
+                                              action: #selector(eventToggleLang))
+        self.rightNavBtn = navigationItem.rightBarButtonItem
     }
     
     @objc
-    private func eventLangBtnTapped() {
+    private func eventToggleLang() {
         loadingView.show()
-        presenter.eventLangBtnTapped()
-//        _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { [weak self]
-//             timer in
-//            self?.loadingView.dismiss()
-//        }
+        rightNavBtn.isEnabled = false
+        presenter.eventToggleLang()
+    }
+    
+    private func setupNavBar() {
+        navigationItem.title = "For You"
+        addLangBtn()
     }
     
 }
@@ -66,12 +70,13 @@ extension NewsListVC: NewsListPresenterOutput {
         navigationController?.pushViewController(newsDetailVC, animated: true)
     }
     
-    func showNewsList(_ newsList: [NewsViewModel]) {
-        adapter.newsList = newsList
+    func showNewsListPage(_ newsPage: NewsListPageViewModel) {
+        adapter.newsList = newsPage.newsEntryList
         DispatchQueue.main.async { [ weak self] in
-            //            self?.spinnerView.stopAnimating()
             self?.tableView.reloadData()
+            self?.navigationItem.rightBarButtonItem?.title = newsPage.langBtnTitle
             self?.loadingView.dismiss()
+            self?.rightNavBtn.isEnabled = true
         }
     }
     

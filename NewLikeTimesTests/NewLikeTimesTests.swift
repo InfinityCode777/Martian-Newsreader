@@ -69,15 +69,26 @@ class NewLikeTimesTests: XCTestCase {
                                                                fromLang: .en,
                                                                toLang: .mr)
         
-        //        for (idx, char) in str.enumerated() {
-        //            print("\(idx), \(char)")
-        //        }
-        
-        //        let aa = Int("2,000") // nope
-        
         XCTAssertEqual(martianText, expMartianText, "Translation error")
-        //        print("ahaha")
+    }
+    
+    func testSupportLangEnum() throws {
+        let lang1 = SupportLanguage.en
+        let lang2 = SupportLanguage.mr
         
+        XCTAssertEqual(lang1.description, "English", "oops")
+        XCTAssertEqual(lang1.rawValue, "en", "oops")
+        XCTAssertEqual(lang2.description, "Martian", "oops")
+        XCTAssertEqual(lang2.rawValue, "mr", "oops")
+        
+        let lang3 = SupportLanguage(rawValue: "en")
+        let lang4 = SupportLanguage(rawValue: "mr")
+        
+        XCTAssertEqual(lang1, lang3, "oops")
+        XCTAssertEqual(lang2, lang4, "oops")
+        
+        let lang5 = SupportLanguage(rawValue: "es")
+        XCTAssertNil(lang5, "oops")
     }
     
 

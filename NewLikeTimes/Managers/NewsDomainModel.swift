@@ -10,10 +10,11 @@ import UIKit
 struct NewsDomainModel: Codable {
     var title: String
     var body: String
-    var images: [newImageBundle]
+    var images: [newsImageBundle]
+    var lang: String?
 }
 
-struct newImageBundle: Codable {
+struct newsImageBundle: Codable {
     var topImage: Bool
     var url: URL
     var width: CGFloat
