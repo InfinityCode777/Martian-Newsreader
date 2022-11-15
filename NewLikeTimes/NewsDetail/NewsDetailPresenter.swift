@@ -5,16 +5,28 @@
 //  Created by Jing Wang on 11/10/22.
 //
 
-import Foundation
+import UIKit
 
 class NewsDetailPresenter {
     weak var output: NewsDetailPresenterOutput!
+    var appState: AppState
     
-    func eventLoadDetailedNews() {
-        output.showNewsDetail()
+    init(appState: AppState = .shared) {
+        self.appState = appState
+    }
+
+    func eventLoadNewsDetail() {
+        guard
+            let domainData = appState.selectedDomainData
+        else {
+            return
+        }
+        
+        let news = NewsViewModel.createViewModel(domainData)
+        output.showNewsDetail(news)
     }
     
     func eventViewReady() {
-        eventLoadDetailedNews()
+        eventLoadNewsDetail()
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class NewsDetailVC: UIViewController, LoadingViewAttaching {
     // This should not be stored here
-    var news: NewsViewModel!
+//    var news: NewsViewModel!
     var presenter: NewsDetailPresenter!
     
     @IBOutlet var titelLabel: UILabel!
@@ -34,7 +34,7 @@ class NewsDetailVC: UIViewController, LoadingViewAttaching {
 }
 
 extension NewsDetailVC: NewsDetailPresenterOutput {
-    func showNewsDetail() {
+    func showNewsDetail(_ news: NewsViewModel) {
         //    func show(newsDetail: NewsViewModel) {
         //        print("ahaha >>> Title >>> \(news.title)")
         titelLabel.text = news.title

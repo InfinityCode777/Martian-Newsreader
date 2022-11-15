@@ -42,6 +42,7 @@ extension NewsListAdapter: UITableViewDataSource {
 
 extension NewsListAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.eventItemSelected(news: newsList[indexPath.row])
+//        presenter.eventItemSelected(news: newsList[indexPath.row])
+        presenter.eventItemSelected(selectedIdx: indexPath.row)
     }
 }

@@ -9,6 +9,11 @@ import UIKit
 
 class NewsListPresenter {
     weak var output: NewsListPresenterOutput!
+    var appState: AppState
+    
+    init(appState: AppState = .shared) {
+        self.appState = appState
+    }
     
     func eventLoadNewsList(refreshData: Bool = false,
                            lang: SupportLanguage = .en) {
@@ -23,10 +28,11 @@ class NewsListPresenter {
             
             switch result {
             case .success(let domainData):
-                let newsList = self.createViewModelList(domainData)
-                self.output.show(newsList: newsList)
+                self.appState.domainDataList = domainData
+                let newsList = NewsViewModel.createViewModelList(domainData)
+                self.output.showNewsList(newsList)
             case .failure(let error):
-                self.output.showError(error: error)
+                self.output.showError(error)
                 break
             }
         }
@@ -36,38 +42,24 @@ class NewsListPresenter {
         eventLoadNewsList(refreshData: true)
     }
     
-    func eventItemSelected(news: NewsViewModel) {
-        // Router, use VC for now
-        output.showDetail(news: news)
+    func eventItemSelected(selectedIdx: Int) {
+        appState.selectedIdx = selectedIdx
+//        guard
+//            let domainData = appState.selectedDomainData
+//        else {
+//            print("Failed to get selected news")
+//            return
+//        }
+//        let news = createViewModel(domainData)
+        output.showNewsDetailPage()
     }
+    
+//    func eventItemSelected(news: NewsViewModel) {
+//        // Router, use VC for now
+//        output.showNewsDetail(news)
+//    }
     
     func eventLangBtnTapped() {
         eventLoadNewsList(refreshData: true, lang: .mr)
-    }
-
-    
-    private func createViewModelList(_ domainDataList: [NewsDomainModel]) -> [NewsViewModel] {
-        var newsList = [NewsViewModel]()
-        var topImage: UIImage?
-        for domainData in domainDataList {
-            // Get the first topImage and use it for both thumbnail and top image
-            for imageBundle in domainData.images {
-                if imageBundle.topImage {
-                    topImage = UIImage(url: imageBundle.url)
-                    break
-                }
-            }
-            
-            let viewData = NewsViewModel(title: domainData.title,
-                                         body: domainData.body,
-                                         image: topImage ?? UIImage())
-            newsList.append(viewData)
-        }
-        
-        return newsList
-    }
-    
-    private func getImage(with url: URL) -> UIImage {
-        return UIImage()
     }
 }

@@ -40,6 +40,7 @@
 		2D330FD42922BF45000C6993 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D330FD32922BF45000C6993 /* Anchorage */; };
 		2D330FD62922BFEA000C6993 /* ExtUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD52922BFEA000C6993 /* ExtUIColor.swift */; };
 		2D330FD82922C0B7000C6993 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FD72922C0B7000C6993 /* ExtUIView.swift */; };
+		2D330FDB292332FF000C6993 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330FDA292332FF000C6993 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		2D330FD02922BEC1000C6993 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2D330FD52922BFEA000C6993 /* ExtUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIColor.swift; sourceTree = "<group>"; };
 		2D330FD72922C0B7000C6993 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
+		2D330FDA292332FF000C6993 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		2D330F642919F714000C6993 /* NewLikeTimes */ = {
 			isa = PBXGroup;
 			children = (
+				2D330FD9292332DC000C6993 /* AppState */,
 				2D330FBF291EE589000C6993 /* Utils */,
 				2D330FBC291DA7B3000C6993 /* Router */,
 				2D330FA6291B12AA000C6993 /* Managers */,
@@ -244,6 +247,14 @@
 				2D330FD72922C0B7000C6993 /* ExtUIView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2D330FD9292332DC000C6993 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				2D330FDA292332FF000C6993 /* AppState.swift */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +400,7 @@
 				2D330FC7291EF670000C6993 /* TextTranslator.swift in Sources */,
 				2D330FCF2922BC9D000C6993 /* LoadingViewAttaching.swift in Sources */,
 				2D330F6A2919F714000C6993 /* NewsListVC.swift in Sources */,
+				2D330FDB292332FF000C6993 /* AppState.swift in Sources */,
 				2D330F662919F714000C6993 /* AppDelegate.swift in Sources */,
 				2D330FA8291B12B8000C6993 /* NewsManager.swift in Sources */,
 				2D330FD62922BFEA000C6993 /* ExtUIColor.swift in Sources */,

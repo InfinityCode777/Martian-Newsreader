@@ -61,13 +61,14 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
 }
 
 extension NewsListVC: NewsListPresenterOutput {
-    func showDetail(news: NewsViewModel) {
+//    func showDetail(news: NewsViewModel) {
+    func showNewsDetailPage() {
         let newsDetailVC = Coordinator.getNewsDetailVC()
-        newsDetailVC.news = news
+//        newsDetailVC.news = news
         navigationController?.pushViewController(newsDetailVC, animated: true)
     }
     
-    func show(newsList: [NewsViewModel]) {
+    func showNewsList(_ newsList: [NewsViewModel]) {
         adapter.newsList = newsList
         DispatchQueue.main.async { [ weak self] in
             //            self?.spinnerView.stopAnimating()
@@ -76,7 +77,7 @@ extension NewsListVC: NewsListPresenterOutput {
         }
     }
     
-    func showError(error: LocalizedError) {
+    func showError(_ error: LocalizedError) {
         print("Error: \(error.localizedDescription)")
     }
 }
