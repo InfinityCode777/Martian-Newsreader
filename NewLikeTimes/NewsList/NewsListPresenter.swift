@@ -44,20 +44,8 @@ class NewsListPresenter {
     
     func eventItemSelected(selectedIdx: Int) {
         appState.selectedIdx = selectedIdx
-//        guard
-//            let domainData = appState.selectedDomainData
-//        else {
-//            print("Failed to get selected news")
-//            return
-//        }
-//        let news = createViewModel(domainData)
         output.showNewsDetailPage()
     }
-    
-//    func eventItemSelected(news: NewsViewModel) {
-//        // Router, use VC for now
-//        output.showNewsDetail(news)
-//    }
     
     func eventLangBtnTapped() {
         eventLoadNewsList(refreshData: true, lang: .mr)

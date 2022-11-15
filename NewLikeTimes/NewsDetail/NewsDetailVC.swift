@@ -35,8 +35,6 @@ class NewsDetailVC: UIViewController, LoadingViewAttaching {
 
 extension NewsDetailVC: NewsDetailPresenterOutput {
     func showNewsDetail(_ news: NewsViewModel) {
-        //    func show(newsDetail: NewsViewModel) {
-        //        print("ahaha >>> Title >>> \(news.title)")
         titelLabel.text = news.title
         bodyTextView.text = news.body
         imageView.image = news.image

@@ -61,10 +61,8 @@ class NewsListVC: UIViewController, LoadingViewAttaching {
 }
 
 extension NewsListVC: NewsListPresenterOutput {
-//    func showDetail(news: NewsViewModel) {
     func showNewsDetailPage() {
         let newsDetailVC = Coordinator.getNewsDetailVC()
-//        newsDetailVC.news = news
         navigationController?.pushViewController(newsDetailVC, animated: true)
     }
     
