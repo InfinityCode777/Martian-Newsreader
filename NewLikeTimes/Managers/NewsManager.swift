@@ -10,6 +10,8 @@ import Foundation
 class NewsManager {
     private init() {}
     
+    private static var BASE_URL_STR: String { return "https://s1.nyt.com/ios-newsreader/candidates/test/articles.json" }
+    
     public private(set) var model = [NewsDomainModel]()
     
     public static let shared = NewsManager()
@@ -65,6 +67,87 @@ class NewsManager {
                 completion(.failure(.failedToDecodeJson))
             }
         }
+    }
+    
+    func loadAll(urlStr: String = NewsManager.BASE_URL_STR,
+                 refreshData: Bool = false,
+                 lang: SupportLanguage = .en,
+                 completion: @escaping (Result<[NewsDomainModel], DataFetchError>) -> ()) {
+        guard
+            let url = URL(string: urlStr)
+        else {
+            completion(.failure(.invalidUrl))
+            return
+        }
+        
+        let session = URLSession(configuration: .default,
+                                 delegate: nil,
+                                 delegateQueue: nil)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request) {[weak self] (data, response, error ) in
+            guard let self = self else {
+                fatalError("Failed to get instance of \(NewsManager.self)")
+            }
+            
+            self.dataAccessQ.async {
+                guard
+                    error == nil
+                else {
+                    completion(.failure(.genericError(error)))
+                    return
+                }
+                
+                guard
+                    let response = response as? HTTPURLResponse
+                else {
+                    completion(.failure(.invalidUrlResponse))
+                    return
+                }
+                
+                guard
+                    response.statusCode == 200
+                else {
+                    completion(.failure(.statusCodeNot200))
+                    return
+                }
+                
+                guard
+                    let data = data
+                else {
+                    completion(.failure(.invalidData))
+                    return
+                }
+
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    var jsonData = try decoder.decode([NewsDomainModel].self, from: data)
+                    
+                    // Simulate that we can get info from backend
+                    for idx in 0..<jsonData.count {
+                        jsonData[idx].lang = lang.rawValue
+                    }
+                    
+                    if (lang != .en) {
+                        let tranlatedJsonData = self.translateDomainModel(jsonData, to: lang)
+                        self.model = tranlatedJsonData
+                        completion(.success(tranlatedJsonData))
+                    } else {
+                        self.model = jsonData
+                        completion(.success(jsonData))
+                    }
+                } catch {
+                    print("error:\(error)")
+                    completion(.failure(.failedToDecodeJson))
+                }
+                
+            }
+            
+        }
+        task.resume()
     }
     
     private func translateDomainModel(_ model: [NewsDomainModel],

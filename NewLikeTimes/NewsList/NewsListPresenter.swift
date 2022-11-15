@@ -17,8 +17,7 @@ class NewsListPresenter {
     
     func eventLoadNewsList(refreshData: Bool = false,
                            lang: SupportLanguage = .en) {
-        NewsManager.shared.loadAll(filename: "news_data",
-                                   refreshData: refreshData,
+        NewsManager.shared.loadAll(refreshData: refreshData,
                                    lang: lang) {[weak self] result in
             guard
                 let self = self

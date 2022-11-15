@@ -10,7 +10,13 @@ import Foundation
 public enum DataFetchError: LocalizedError {
     case failedToDecodeJson
     case failedToLocateFile
+    case invalidUrl
     case emptyModel
+    case invalidUrlResponse
+    case invalidData
+    case statusCodeNot200
+    case failedToGetSelf
+    case genericError(Error?)
     case testError
     
     public var errorDescription: String? {
@@ -21,7 +27,15 @@ public enum DataFetchError: LocalizedError {
             return "Failed to locate file"
         case .emptyModel:
             return "Empty domain model"
-        case .testError:
+        case .invalidUrlResponse:
+            return "Invalid URL Response"
+        case .invalidData:
+            return "Invalid data"
+        case .statusCodeNot200:
+            return "Status code is not 200"
+        case .failedToGetSelf:
+            return "Failed to get self"
+        default:
             return ""
         }
     }
