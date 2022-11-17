@@ -13,9 +13,9 @@
 		2D330F6D2919F714000C6993 /* NewsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F6B2919F714000C6993 /* NewsList.storyboard */; };
 		2D330F6F2919F714000C6993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F6E2919F714000C6993 /* Assets.xcassets */; };
 		2D330F722919F714000C6993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D330F702919F714000C6993 /* LaunchScreen.storyboard */; };
-		2D330F7D2919F714000C6993 /* NewLikeTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F7C2919F714000C6993 /* NewLikeTimesTests.swift */; };
-		2D330F872919F715000C6993 /* NewLikeTimesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */; };
-		2D330F892919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */; };
+		2D330F7D2919F714000C6993 /* MartianNewsreaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F7C2919F714000C6993 /* MartianNewsreaderTests.swift */; };
+		2D330F872919F715000C6993 /* MartianNewsreaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F862919F715000C6993 /* MartianNewsreaderUITests.swift */; };
+		2D330F892919F715000C6993 /* MartianNewsreaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F882919F715000C6993 /* MartianNewsreaderUITestsLaunchTests.swift */; };
 		2D330F962919F755000C6993 /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F952919F755000C6993 /* NewsDetailVC.swift */; };
 		2D330F9D291AE6FC000C6993 /* NewsListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */; };
 		2D330F9F291AE774000C6993 /* NewsEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D330F9E291AE774000C6993 /* NewsEntryViewModel.swift */; };
@@ -73,10 +73,10 @@
 		2D330F712919F714000C6993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D330F732919F714000C6993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D330F782919F714000C6993 /* MartianNewsreaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianNewsreaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D330F7C2919F714000C6993 /* NewLikeTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesTests.swift; sourceTree = "<group>"; };
+		2D330F7C2919F714000C6993 /* MartianNewsreaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianNewsreaderTests.swift; sourceTree = "<group>"; };
 		2D330F822919F715000C6993 /* MartianNewsreaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MartianNewsreaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITests.swift; sourceTree = "<group>"; };
-		2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLikeTimesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D330F862919F715000C6993 /* MartianNewsreaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianNewsreaderUITests.swift; sourceTree = "<group>"; };
+		2D330F882919F715000C6993 /* MartianNewsreaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianNewsreaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2D330F952919F755000C6993 /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		2D330F9C291AE6FC000C6993 /* NewsListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListAdapter.swift; sourceTree = "<group>"; };
 		2D330F9E291AE774000C6993 /* NewsEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEntryViewModel.swift; sourceTree = "<group>"; };
@@ -135,9 +135,9 @@
 		2D330F592919F714000C6993 = {
 			isa = PBXGroup;
 			children = (
-				2D330F642919F714000C6993 /* NewLikeTimes */,
-				2D330F7B2919F714000C6993 /* NewLikeTimesTests */,
-				2D330F852919F715000C6993 /* NewLikeTimesUITests */,
+				2D330F642919F714000C6993 /* MartianNewsreader */,
+				2D330F7B2919F714000C6993 /* MartianNewsreaderTests */,
+				2D330F852919F715000C6993 /* MartianNewsreaderUITests */,
 				2D330F632919F714000C6993 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D330F642919F714000C6993 /* NewLikeTimes */ = {
+		2D330F642919F714000C6993 /* MartianNewsreader */ = {
 			isa = PBXGroup;
 			children = (
 				2D330FD9292332DC000C6993 /* AppState */,
@@ -167,25 +167,25 @@
 				2D330F702919F714000C6993 /* LaunchScreen.storyboard */,
 				2D330F732919F714000C6993 /* Info.plist */,
 			);
-			path = NewLikeTimes;
+			path = MartianNewsreader;
 			sourceTree = "<group>";
 		};
-		2D330F7B2919F714000C6993 /* NewLikeTimesTests */ = {
+		2D330F7B2919F714000C6993 /* MartianNewsreaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				2D330F7C2919F714000C6993 /* NewLikeTimesTests.swift */,
+				2D330F7C2919F714000C6993 /* MartianNewsreaderTests.swift */,
 				2D330FB4291C456C000C6993 /* test_news_data.json */,
 			);
-			path = NewLikeTimesTests;
+			path = MartianNewsreaderTests;
 			sourceTree = "<group>";
 		};
-		2D330F852919F715000C6993 /* NewLikeTimesUITests */ = {
+		2D330F852919F715000C6993 /* MartianNewsreaderUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2D330F862919F715000C6993 /* NewLikeTimesUITests.swift */,
-				2D330F882919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift */,
+				2D330F862919F715000C6993 /* MartianNewsreaderUITests.swift */,
+				2D330F882919F715000C6993 /* MartianNewsreaderUITestsLaunchTests.swift */,
 			);
-			path = NewLikeTimesUITests;
+			path = MartianNewsreaderUITests;
 			sourceTree = "<group>";
 		};
 		2D330F972919F7F4000C6993 /* NewsList */ = {
@@ -440,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D330F7D2919F714000C6993 /* NewLikeTimesTests.swift in Sources */,
+				2D330F7D2919F714000C6993 /* MartianNewsreaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,8 +448,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D330F872919F715000C6993 /* NewLikeTimesUITests.swift in Sources */,
-				2D330F892919F715000C6993 /* NewLikeTimesUITestsLaunchTests.swift in Sources */,
+				2D330F872919F715000C6993 /* MartianNewsreaderUITests.swift in Sources */,
+				2D330F892919F715000C6993 /* MartianNewsreaderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +611,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewLikeTimes/Info.plist;
+				INFOPLIST_FILE = MartianNewsreader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -641,7 +641,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A3GHL87D55;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewLikeTimes/Info.plist;
+				INFOPLIST_FILE = MartianNewsreader/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Martian News";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

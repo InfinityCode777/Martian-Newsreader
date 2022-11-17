@@ -1,14 +1,14 @@
 //
-//  NewLikeTimesTests.swift
-//  NewLikeTimesTests
+//  MartianNewsreaderTests.swift
+//  MartianNewsreaderTests
 //
 //  Created by Jing Wang on 11/7/22.
 //
 
 import XCTest
-@testable import NewLikeTimes
+@testable import MartianNewsreader
 
-class NewLikeTimesTests: XCTestCase {
+class MartianNewsreaderTests: XCTestCase {
     var newsManager: NewsManager!
     var testNewsData: [NewsDomainModel]!
 
@@ -28,7 +28,8 @@ class NewLikeTimesTests: XCTestCase {
         //        guard
         let testBundle = Bundle(for: type(of: self))
         newsManager.loadAll(filename: "test_news_data",
-                            lang: .mr,
+                            refreshData: true,
+                            lang: .en,
                             bundle: testBundle) {[weak self] result in
             switch result {
             case .success(let domainData):

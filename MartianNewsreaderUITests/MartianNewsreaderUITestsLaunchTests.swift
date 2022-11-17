@@ -1,13 +1,13 @@
 //
-//  NewLikeTimesUITestsLaunchTests.swift
-//  NewLikeTimesUITests
+//  MartianNewsreaderUITestsLaunchTests.swift
+//  MartianNewsreaderUITests
 //
 //  Created by Jing Wang on 11/7/22.
 //
 
 import XCTest
 
-class NewLikeTimesUITestsLaunchTests: XCTestCase {
+class MartianNewsreaderUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
