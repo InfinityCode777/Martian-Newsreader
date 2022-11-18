@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D330F612919F714000C6993"
-               BuildableName = "NewLikeTimes.app"
+               BuildableName = "MartianNewsreader.app"
                BlueprintName = "MartianNewsreader"
                ReferencedContainer = "container:MartianNewsreader.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D330F772919F714000C6993"
-               BuildableName = "NewLikeTimesTests.xctest"
+               BuildableName = "MartianNewsreaderTests.xctest"
                BlueprintName = "MartianNewsreaderTests"
                ReferencedContainer = "container:MartianNewsreader.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D330F812919F715000C6993"
-               BuildableName = "NewLikeTimesUITests.xctest"
+               BuildableName = "MartianNewsreaderUITests.xctest"
                BlueprintName = "MartianNewsreaderUITests"
                ReferencedContainer = "container:MartianNewsreader.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D330F612919F714000C6993"
-            BuildableName = "NewLikeTimes.app"
+            BuildableName = "MartianNewsreader.app"
             BlueprintName = "MartianNewsreader"
             ReferencedContainer = "container:MartianNewsreader.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D330F612919F714000C6993"
-            BuildableName = "NewLikeTimes.app"
+            BuildableName = "MartianNewsreader.app"
             BlueprintName = "MartianNewsreader"
             ReferencedContainer = "container:MartianNewsreader.xcodeproj">
          </BuildableReference>
